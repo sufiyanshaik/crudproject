@@ -1,0 +1,23 @@
+{% extends "testapp/base.html" %}
+{% block child_block %}
+<h1>Update Employee Information</h1>
+<br><br>
+<form   method="post">
+  <table>
+    Employee no:<input type="number" name="eno" value="{{emp.eno}}">
+    <br><br>
+    Employee Name:<input type="text" name="ename" value="{{emp.ename}}">
+  </table>
+  {% csrf_token %}
+  <br><br>
+  <input type="submit" name="" class="btn btn-success btn-large" value="Update Record">
+</form>
+
+
+
+
+
+
+
+
+{% endblock %}

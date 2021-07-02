@@ -1,0 +1,33 @@
+{% extends "testapp/base.html" %}
+{% block child_block %}
+<h1>Employee Information</h1>
+<br><br>
+{% if employees %}
+  <table border="2">
+    <thead>
+      <th>Employee No</th>
+      <th>Employee Name</th>
+      <th>Actions</th>
+    </thead>
+    {% for emp in employees %}
+      <tbody>
+        <tr>
+          <td>{{emp.eno}}</td>
+          <td>{{emp.ename}}</td>
+          <td><a href="/update/{{emp.id}}">Update</a> <a href="/delete/{{emp.id}}">Delete</a></td>
+        </tr>
+      </tbody>
+    {% endfor %}
+  </table>
+{% else %}
+  <p>record not found</p>
+{% endif %}
+<br><br>
+<a href="/create" class="btn btn-success btn-large">Add New Record</a>
+
+
+
+
+
+
+{% endblock %}

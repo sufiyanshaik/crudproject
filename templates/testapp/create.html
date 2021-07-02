@@ -1,0 +1,21 @@
+{% extends "testapp/base.html" %}
+{% block child_block %}
+<h1>Add Employee Information</h1>
+<br><br>
+<form   method="post">
+  <table>
+    {{form.as_p}}
+  </table>
+  {% csrf_token %}
+  <br>
+  <input type="submit" name="" class="btn btn-success btn-large" value="Add Record">
+</form>
+
+
+
+
+
+
+
+
+{% endblock %}
